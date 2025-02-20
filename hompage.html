@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Top Bar -->
+    <div class="hidden md:block bg-blue-900 text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i> (123) 456-7890
+                </span>
+                <span class="flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> contact@school.edu
+                </span>
+            </div>
+            <div class="flex space-x-4">
+                <i class="fab fa-facebook cursor-pointer"></i>
+                <i class="fab fa-instagram cursor-pointer"></i>
+                <i class="fab fa-twitter cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-900">Saints Academy</div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8" id="desktop-menu">
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <!-- Mobile menu items will be populated by JavaScript -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-[500px] bg-blue-100">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                    Welcome to Our School
+                </h1>
+                <p class="text-lg text-gray-700 mb-8">
+                    Nurturing minds, building character, and inspiring excellence in education since 2025.
+                </p>
+                <p class="text-lg text-gray-700 mb-8">
+                    We aim to help our students into becoming admirable prospects that contribute to society.
+                </p>
+                <div class="space-x-4">
+                    <button class="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800">
+                        Apply Now
+                    </button>
+                    <button class="border-2 border-blue-900 text-blue-900 px-6 py-3 rounded-md hover:bg-blue-50">
+                        Virtual Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Notable Alumni</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Alumni 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/Chris.png" alt="John Smith" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-900">John Smith</h3>
+                        <p class="text-gray-600">Class of 2010</p>
+                        <p class="text-sm text-gray-700 mt-2">CEO of Tech Innovations Inc.</p>
+                    </div>
+                </div>
+
+                <!-- Alumni 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/Agri.png" alt="Sarah Johnson" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-900">Sarah Johnson</h3>
+                        <p class="text-gray-600">Class of 2005</p>
+                        <p class="text-sm text-gray-700 mt-2">Olympic Gold Medalist</p>
+                    </div>
+                </div>
+
+                <!-- Alumni 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/darren.png" alt="Dr. Michael Chen" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-900">Dr. Michael Chen</h3>
+                        <p class="text-gray-600">Class of 1995</p>
+                        <p class="text-sm text-gray-700 mt-2">Leading Research Scientist</p>
+                    </div>
+                </div>
+
+                <!-- Alumni 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/Joseph.png" alt="Emma Davis" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-blue-900">Emma Davis</h3>
+                        <p class="text-gray-600">Class of 2015</p>
+                        <p class="text-sm text-gray-700 mt-2">Award-winning Author</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Sections -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Latest News -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-900 mb-4">Latest News</h3>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <p class="text-sm text-gray-500">March 15, 2025</p>
+                        <h4 class="font-medium">Student Science Fair Winners Announced</h4>
+                    </div>
+                    <div class="border-b pb-4">
+                        <p class="text-sm text-gray-500">March 10, 2025</p>
+                        <h4 class="font-medium">Saints Basketball Team Debut</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-900 mb-4">Upcoming Events</h3>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <p class="text-sm text-gray-500">March 20, 2025</p>
+                        <h4 class="font-medium">Parent-Teacher Conference</h4>
+                    </div>
+                    <div class="border-b pb-4">
+                        <p class="text-sm text-gray-500">March 25, 2025</p>
+                        <h4 class="font-medium">School Play Performance</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-900 mb-4">Additional Links</h3>
+                <div class="space-y-2">
+                    <a href="#" class="block text-gray-700 hover:text-blue-900">Academic Calendar</a>
+                    <a href="#" class="block text-gray-700 hover:text-blue-900">Lunch Menu</a>
+                    <a href="#" class="block text-gray-700 hover:text-blue-900">Library Resources</a>
+                    <a href="#" class="block text-gray-700 hover:text-blue-900">Sports Schedule</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="homie.js"></script>
+</body>
+</html>
